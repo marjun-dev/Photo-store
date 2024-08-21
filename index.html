@@ -47,7 +47,7 @@
       </nav>
 
       <!-- Header -->
-      <div class="relative bg-cover bg-center" style="background-image: url('Poster.jpg'); height: 500px;">
+      <div class="relative bg-cover bg-center" style="background-image: url('Poster.jpg'); height: 1350px;">
         <div class="absolute left-0 bottom-0 p-8">
             <h1 class="text-4xl text-white font-bold">STOCK PHOTOS</h1>
             <p class="text-white mt-2 max-w-md">John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
@@ -58,15 +58,14 @@
     </div>
 
       <!-- Search Bar -->
-  <section>
       <div
         class="relative w-full max-w-2xl mx-auto mt-4 rounded-lg border-2 border-red-600 overflow-hidden"
       >
         <input
           id="search-input"
           type="text"
-          class="w-full p-3 border rounded outline-none"
-          placeholder="Search for images..."
+          class="w-full p-3 border rounded outline-none text-center"
+          placeholder="Search for images"
         />
         <button
           id="search-button"
@@ -75,18 +74,23 @@
           <img src="search_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" class="h-6 mr-2" alt="" />
         </button>
       </div>
-    </section>
+      
 
       <!-- First Image Section -->
-      <div id="first-image-section" class="mt-8">
-        <div id="first-image" class="border p-4 rounded bg-white">
-          <!-- First image details will be inserted here -->
+      <div id="first-image-section" class="mt-4 flex justify-center">
+        <div id="first-image" class="border p-4 rounded bg-white flex items-center">
+            <img src="Thumbnails.jpg" alt="Laptop" class="border-b-2 rounded-lg w-1/2">
+            <div class="ml-4 w-1/2">
+                <h1 class="text-left font-bold text-2xl">Laptop</h1>
+                <p class="text-left text-pink-500">Photographer: Arjun</p>
+                <button class="mt-2 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"><a href="https://github.com/Arjun-marmeto" target="_blank">Explore More</a></button>
+            </div>
         </div>
-      </div>
+    </div>
 
       <!-- Similar Results Section -->
       <div id="similar-results-section" class="my-8 mx-4">
-        <h2 class="text-xl font-semibold mb-4">Similar Results</h2>
+        <h2 class="text-xl font-semibold mb-4">Similar Result</h2>
         <div class="splide" id="similar-results-slider">
           <div class="splide__track">
             <ul class="splide__list" id="similar-results">
@@ -101,8 +105,8 @@
         <div class="flex justify-between">
           <h2 class="text-xl font-semibold mb-4">Favorites List</h2>
           <div>
-            <label for="sort-options">Sort By:</label>
-            <select id="sort-options" class="p-2 border rounded">
+            <label for="sort-options" class="font-bold" >Sort By:</label>
+            <select id="sort-options" class="p-2 border rounded bg-red-600 border-2 font-bold">
               <option value="title">Title</option>
               <option value="alt">Alt</option>
             </select>
