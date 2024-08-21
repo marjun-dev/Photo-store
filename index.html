@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/css/splide.min.css"/>
+  </head>
+
+  <body class="bg-black-100">
+    <div class="w-full">
+      <div class="bg-black text-white text-center py-2">
+        <p>SUPER SALE UP TO 40% OFF</p>
+      </div>
+      <nav
+        class="bg-white py-4 px-6 flex justify-between items-center border-b-2 border-gray-200"
+      >
+        <!-- Left Navigation Links -->
+        <div class="flex space-x-6 hidden md:block">
+          <a href="#" class="text-black font-semibold hover:text-pink-500">SHOP</a>
+          <a href="#" class="text-black font-semibold hover:text-pink-500">COMMUNITY</a>
+        </div>
+
+        <!-- Logo -->
+        <div class="text-center">
+          <img
+            src="/images/Registered_Logo_PNG-02_4435x 1.jpg"
+            alt="PLUSH Logo"
+            class="mx-auto"
+            style="max-height: 40px"
+          />
+        </div>
+
+        <!-- Right Icons -->
+        <div class="flex space-x-6 items-center">
+          <button class="text-black hover:text-pink-500">
+            <img src="/images/person_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" class="h-9 mr-2" alt="user" />
+          </button>
+          <button class="text-black hover:text-pink-500">
+            <img src="images/search_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" class="h-9 mr-2" alt="search" />
+          </button>
+          <button class="text-black hover:text-pink-500">
+            <img src="images/local_mall_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" class="h-9 mr-2" alt="cart" />
+          </button>
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <div class="relative bg-cover bg-center" style="background-image: url('/images/Poster.jpg'); height: 500px;">
+        <div class="absolute left-0 bottom-0 p-8">
+            <h1 class="text-4xl text-white font-bold">STOCK PHOTOS</h1>
+            <p class="text-white mt-2 max-w-md">John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
+            <button  class="mt-4 bg-red-600 text-white px-4 py-2 flex items-center">
+                <img src="/images/play_arrow_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" alt="Play" class="h-4 mr-2"> <a href="https://www.pexels.com/search/photography/" target="_blank">Explore!</a>
+            </button>
+        </div>
+    </div>
+
+      <!-- Search Bar -->
+  <section>
+      <div
+        class="relative w-full max-w-2xl mx-auto mt-4 rounded-lg border-2 border-red-600 overflow-hidden"
+      >
+        <input
+          id="search-input"
+          type="text"
+          class="w-full p-3 border rounded outline-none"
+          placeholder="Search for images..."
+        />
+        <button
+          id="search-button"
+          class="absolute right-0 top-0 h-full px-6 text-white rounded-r"
+        >
+          <img src="/images/search_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" class="h-6 mr-2" alt="" />
+        </button>
+      </div>
+    </section>
+
+      <!-- First Image Section -->
+      <div id="first-image-section" class="mt-8">
+        <div id="first-image" class="border p-4 rounded bg-white">
+          <!-- First image details will be inserted here -->
+        </div>
+      </div>
+
+      <!-- Similar Results Section -->
+      <div id="similar-results-section" class="my-8 mx-4">
+        <h2 class="text-xl font-semibold mb-4">Similar Results</h2>
+        <div class="splide" id="similar-results-slider">
+          <div class="splide__track">
+            <ul class="splide__list" id="similar-results">
+              <!-- Similar images will be inserted here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorites Section -->
+      <div id="favorites-section" class="my-8 mx-4">
+        <div class="flex justify-between">
+          <h2 class="text-xl font-semibold mb-4">Favorites List</h2>
+          <div>
+            <label for="sort-options">Sort By:</label>
+            <select id="sort-options" class="p-2 border rounded">
+              <option value="title">Title</option>
+              <option value="alt">Alt</option>
+            </select>
+          </div>
+        </div>
+        <div class="splide" id="favorites-slider">
+          <div class="splide__track">
+            <ul class="splide__list" id="favorites">
+              <!-- Favorites images will be inserted here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
